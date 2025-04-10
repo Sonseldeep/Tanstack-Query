@@ -17,3 +17,18 @@ A real-world React project using **TanStack Query** for data fetching. This proj
 
 ```bash
 git clone https://github.com/Sonseldeep/Tanstack-Query
+
+```
+## 📂 Change to Project Directory
+ ```bash
+cd Tanstack-Query
+```
+## 🛠️ Run & Install Dependencies (Auto Setup)
+```bash
+chmod +x script.sh
+./script.sh
+```
+
+
+
+
