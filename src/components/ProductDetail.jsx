@@ -26,12 +26,12 @@ const ProductDetail = () => {
   }
   if (isError) {
     return (
-      <p className="text-center text-red-500 mt-10">Something went wrong</p>
+      <p className="text-center text-red-500 mt-10">Something went wrong!!</p>
     );
   }
 
   const goBack = () => {
-    navigate("/");
+    navigate(-1);
   };
 
   return (
