@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import ProductCard from "./ProductCard";
+
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import SideNavbar from "./SideNavbar";
