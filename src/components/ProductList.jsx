@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import ProductCard from "./ProductCard";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import SideNavbar from "./SideNavbar";
 
 const ProductList = () => {
   const [searchText, setSearchText] = useState("");
@@ -40,18 +41,24 @@ const ProductList = () => {
         />
       </div>
 
-      <div className="Product-card-caller flex flex-wrap mt-20">
-        {searchFilterProducts.length > 0 &&
-          searchFilterProducts.map((product) => (
-            <Link key={product.id} to={`/product/${product.id}`}>
-              <ProductCard
-                title={product.title}
-                price={product.price}
-                category={product.category}
-                image={product.thumbnail}
-              />
-            </Link>
-          ))}
+      <div className="Product-card-caller flex  mt-20">
+        <div className="w-1/4">
+          <SideNavbar />
+        </div>
+
+        <div className="w-3/4 flex flex-wrap">
+          {searchFilterProducts.length > 0 &&
+            searchFilterProducts.map((product) => (
+              <Link key={product.id} to={`/product/${product.id}`}>
+                <ProductCard
+                  title={product.title}
+                  price={product.price}
+                  category={product.category}
+                  image={product.thumbnail}
+                />
+              </Link>
+            ))}
+        </div>
       </div>
     </div>
   );
