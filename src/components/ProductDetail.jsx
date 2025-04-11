@@ -31,7 +31,7 @@ const ProductDetail = () => {
   }
 
   const goBack = () => {
-    navigate("/");
+    navigate(-1);
   };
 
   return (
