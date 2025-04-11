@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import SideNavbar from "./SideNavbar";
 import { PAGE_SIZE } from "../utils/constant";
+import ShimmerUI from "./ShimmerUI";
 
 const ProductList = () => {
   const [searchText, setSearchText] = useState("");
@@ -24,7 +25,7 @@ const ProductList = () => {
   });
 
   if (isLoading) {
-    return <p>Loading....</p>;
+    return <ShimmerUI />;
   }
 
   if (isError) {
